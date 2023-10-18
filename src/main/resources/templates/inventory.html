@@ -1,0 +1,34 @@
+<html>
+    <head> 
+        <link th:href="@{/inventory-stylesheet.css}" rel="stylesheet"> 
+    </head>    
+    <body>
+        <div class="topnav">
+            <a  th:href="@{/}" >Form</a>
+            <a class="active" th:href="@{/inventory}">Inventory</a>
+        </div>
+   
+        <div class="container">
+           <table>
+              <tr class="head">
+                 <th>Category</th>
+                 <th>Product Name</th>
+                 <th>Price</th>
+                 <th>Discount</th>
+                 <th>Order Date</th>
+                 <th> </th>
+              </tr>
+              <tr th:each="item:${items}">
+                 <td th:text="${item.category}"></th>
+                 <td th:text="${item.name}"></td>
+                 <td th:text="${item.price}" type="currency" ></td>
+                 <td th:text="${item.discount}" type="currency"></td>
+                 <td th:text="${item.orderDate}" type="date"></td>
+                 <td>
+                    <a role="button" th:href="@{/?id=${item.id}" style="color:white; background-color: #263238" class="table-button">Update</a>
+                 </td>
+              </tr>
+           </table>
+        </div>
+   </body>
+</html>
