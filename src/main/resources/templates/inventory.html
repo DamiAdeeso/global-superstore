@@ -9,6 +9,7 @@
         </div>
    
         <div class="container">
+            <p th:if="${message}" class="alert .alert-success">You've Submitted Succesfully!</p>
            <table>
               <tr class="head">
                  <th>Category</th>
@@ -19,13 +20,13 @@
                  <th> </th>
               </tr>
               <tr th:each="item:${items}">
-                 <td th:text="${item.category}"></th>
+                 <td th:text="${item.category}"></th>x
                  <td th:text="${item.name}"></td>
                  <td th:text="${item.price}" type="currency" ></td>
                  <td th:text="${item.discount}" type="currency"></td>
                  <td th:text="${item.orderDate}" type="date"></td>
                  <td>
-                    <a role="button" th:href="@{/?id=${item.id}" style="color:white; background-color: #263238" class="table-button">Update</a>
+                    <a role="button" th:href="@{/?(id= ${item.id})}" style="color:white; background-color: #263238" class="table-button">Update</a>
                  </td>
               </tr>
            </table>

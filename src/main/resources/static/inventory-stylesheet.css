@@ -113,11 +113,11 @@ table tbody td[type=currency]:before {
     position: relative;
     top: 2%;
     padding: 30px;
-    background-color: #f44336;
+    background-color: #04AA6D;
     color: white;
     opacity: 1;
     transition: opacity 0.6s;
     margin-bottom: 15px;
   }
-  
-  .alert.success {background-color: #04AA6D;}
+
+.alert.success {background-color: #04AA6D;}

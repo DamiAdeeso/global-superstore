@@ -12,6 +12,10 @@ public class Item {
 
     private String id;
 
+    public void setId(String id) {
+        this.id = id;
+    }
+
     public String getId() {
         return id;
     }
@@ -68,6 +72,7 @@ public class Item {
                 ", price='" + price + '\'' +
                 ", discount='" + discount + '\'' +
                 ", orderDate='" + orderDate + '\'' +
+                ", id='" + id + '\'' +
                 '}';
     }
 }
